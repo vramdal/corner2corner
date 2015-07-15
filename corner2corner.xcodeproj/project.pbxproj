@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A31B0668E5B4A8322A3E0B2 /* Pub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A31B47414E227CC42793AF6 /* Pub.swift */; };
+		2A31B66B7D73ABF2DA853F6F /* PubAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A31BE3F8966EC75104754F0 /* PubAnnotation.swift */; };
 		C3E5F5F21B54520800750B29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5F5F11B54520800750B29 /* AppDelegate.swift */; };
 		C3E5F5F51B54520800750B29 /* corner2corner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3E5F5F31B54520800750B29 /* corner2corner.xcdatamodeld */; };
 		C3E5F5F71B54520800750B29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5F5F61B54520800750B29 /* ViewController.swift */; };
@@ -14,6 +16,7 @@
 		C3E5F5FC1B54520800750B29 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3E5F5FB1B54520800750B29 /* Images.xcassets */; };
 		C3E5F5FF1B54520800750B29 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E5F5FD1B54520800750B29 /* LaunchScreen.xib */; };
 		C3E5F60B1B54520800750B29 /* corner2cornerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5F60A1B54520800750B29 /* corner2cornerTests.swift */; };
+		C3E5F6151B5454F700750B29 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E5F6141B5454F700750B29 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A31B47414E227CC42793AF6 /* Pub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pub.swift; sourceTree = "<group>"; };
+		2A31BE3F8966EC75104754F0 /* PubAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubAnnotation.swift; sourceTree = "<group>"; };
 		C3E5F5EC1B54520800750B29 /* corner2corner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = corner2corner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E5F5F01B54520800750B29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3E5F5F11B54520800750B29 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +43,7 @@
 		C3E5F6041B54520800750B29 /* corner2cornerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = corner2cornerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3E5F6091B54520800750B29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3E5F60A1B54520800750B29 /* corner2cornerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = corner2cornerTests.swift; sourceTree = "<group>"; };
+		C3E5F6141B5454F700750B29 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3E5F6151B5454F700750B29 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +68,7 @@
 		C3E5F5E31B54520800750B29 = {
 			isa = PBXGroup;
 			children = (
+				C3E5F6141B5454F700750B29 /* MapKit.framework */,
 				C3E5F5EE1B54520800750B29 /* corner2corner */,
 				C3E5F6071B54520800750B29 /* corner2cornerTests */,
 				C3E5F5ED1B54520800750B29 /* Products */,
@@ -86,6 +94,8 @@
 				C3E5F5FD1B54520800750B29 /* LaunchScreen.xib */,
 				C3E5F5F31B54520800750B29 /* corner2corner.xcdatamodeld */,
 				C3E5F5EF1B54520800750B29 /* Supporting Files */,
+				2A31B47414E227CC42793AF6 /* Pub.swift */,
+				2A31BE3F8966EC75104754F0 /* PubAnnotation.swift */,
 			);
 			path = corner2corner;
 			sourceTree = "<group>";
@@ -218,6 +228,8 @@
 				C3E5F5F71B54520800750B29 /* ViewController.swift in Sources */,
 				C3E5F5F51B54520800750B29 /* corner2corner.xcdatamodeld in Sources */,
 				C3E5F5F21B54520800750B29 /* AppDelegate.swift in Sources */,
+				2A31B0668E5B4A8322A3E0B2 /* Pub.swift in Sources */,
+				2A31B66B7D73ABF2DA853F6F /* PubAnnotation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
