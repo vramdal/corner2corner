@@ -13,6 +13,8 @@
 		2A31B6964FA3FD25F13BB72E /* PubMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A31B23C583955C8C4A56F22 /* PubMap.swift */; };
 		2A31B7FDBF221FCD58A51413 /* smiley.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A31B1FE958F869DE29A4297 /* smiley.png */; };
 		2A31B9F9D596E71589002DBA /* beer.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A31B701870F82FDFA3A949E /* beer.png */; };
+		2A31BB130839B794D7B0D09E /* logo-transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A31BAE80670861D8016936A /* logo-transparent.png */; };
+		2A31BDA3C72BFF776BA3D1E2 /* beer-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 2A31BBC4930685F4EC04DAC0 /* beer-background.png */; };
 		C3E5F5F21B54520800750B29 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5F5F11B54520800750B29 /* AppDelegate.swift */; };
 		C3E5F5F51B54520800750B29 /* corner2corner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C3E5F5F31B54520800750B29 /* corner2corner.xcdatamodeld */; };
 		C3E5F5F71B54520800750B29 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5F5F61B54520800750B29 /* ViewController.swift */; };
@@ -38,6 +40,8 @@
 		2A31B23C583955C8C4A56F22 /* PubMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubMap.swift; sourceTree = "<group>"; };
 		2A31B47414E227CC42793AF6 /* Pub.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pub.swift; sourceTree = "<group>"; };
 		2A31B701870F82FDFA3A949E /* beer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = beer.png; sourceTree = "<group>"; };
+		2A31BAE80670861D8016936A /* logo-transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo-transparent.png"; sourceTree = "<group>"; };
+		2A31BBC4930685F4EC04DAC0 /* beer-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "beer-background.png"; sourceTree = "<group>"; };
 		2A31BBD7A754A39498274BDA /* emptybeer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = emptybeer.png; sourceTree = "<group>"; };
 		2A31BE3F8966EC75104754F0 /* PubAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PubAnnotation.swift; sourceTree = "<group>"; };
 		C3E5F5EC1B54520800750B29 /* corner2corner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = corner2corner.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +112,8 @@
 				2A31B701870F82FDFA3A949E /* beer.png */,
 				2A31B1FE958F869DE29A4297 /* smiley.png */,
 				2A31B23C583955C8C4A56F22 /* PubMap.swift */,
+				2A31BBC4930685F4EC04DAC0 /* beer-background.png */,
+				2A31BAE80670861D8016936A /* logo-transparent.png */,
 			);
 			path = corner2corner;
 			sourceTree = "<group>";
@@ -223,6 +229,8 @@
 				2A31B21FAAD30B0ED945991E /* emptybeer.png in Resources */,
 				2A31B9F9D596E71589002DBA /* beer.png in Resources */,
 				2A31B7FDBF221FCD58A51413 /* smiley.png in Resources */,
+				2A31BDA3C72BFF776BA3D1E2 /* beer-background.png in Resources */,
+				2A31BB130839B794D7B0D09E /* logo-transparent.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +382,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = corner2corner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -384,6 +393,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = corner2corner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -443,6 +453,7 @@
 				C3E5F6101B54520800750B29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C3E5F6111B54520800750B29 /* Build configuration list for PBXNativeTarget "corner2cornerTests" */ = {
 			isa = XCConfigurationList;
@@ -451,6 +462,7 @@
 				C3E5F6131B54520800750B29 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
