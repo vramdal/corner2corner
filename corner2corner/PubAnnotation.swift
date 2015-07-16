@@ -8,6 +8,9 @@ import MapKit
 
 class PubAnnotation : NSObject, MKAnnotation {
 
+    let fulltGlass = UIImage(named: "beer.png")
+    let tomtGlass = UIImage(named: "emptybeer.png")
+
     let pub : Pub
 
     init(pub : Pub, open: Bool = false) {
@@ -25,4 +28,13 @@ class PubAnnotation : NSObject, MKAnnotation {
     var coordinate : CLLocationCoordinate2D {
         return pub.coordinate
     }
+
+    var image : UIImage {
+        if (self.pub.name == "Asylet") {
+            return fulltGlass!
+        } else {
+            return tomtGlass!
+        }
+    }
+
 }

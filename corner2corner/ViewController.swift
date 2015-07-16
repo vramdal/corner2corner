@@ -10,9 +10,8 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController {
-    
-    
-    @IBOutlet weak var map: MKMapView!
+
+    @IBOutlet weak var map: PubMap!
     var pubs: [Pub] = []
 
     var locationManager = CLLocationManager()
@@ -42,10 +41,12 @@ class ViewController: UIViewController {
                 let pub = Pub(name: pubDictionary["pubName"] as! String, coordinate: location, message: pubDictionary["message"] as! String);
                 self.pubs.append(pub)
             }
-            for pub in self.pubs {
-                let pubAnnotation = PubAnnotation(pub: pub)
-                self.map.addAnnotation(pubAnnotation)
-            }
+            dispatch_async(dispatch_get_main_queue(), {
+                for pub in self.pubs {
+                    let pubAnnotation = PubAnnotation(pub: pub)
+                    self.map.addAnnotation(pubAnnotation)
+                }
+            })
         }
 
         fetchPubsTask.resume();
@@ -57,6 +58,7 @@ class ViewController: UIViewController {
             map.setRegion(coordinateRegion, animated: true)
         }
         centerOnMapLocation(initialLocation)
+
         //let galgebergCorner = PubAnnotation(pub: Pub(name: "Galgeberg Corner", coordinate: CLLocationCoordinate2D(latitude: 59.9071893, longitude: 10.7803348)))
         //map.addAnnotation(galgebergCorner)
     }
