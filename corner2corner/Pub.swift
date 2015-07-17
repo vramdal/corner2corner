@@ -8,11 +8,13 @@ import MapKit
 
 class Pub : NSObject {
 
+    let id: Int
     let name: String
     let coordinate: CLLocationCoordinate2D
     let message: String
 
-    init(name: String, coordinate: CLLocationCoordinate2D, message: String) {
+    init(id: Int, name: String, coordinate: CLLocationCoordinate2D, message: String) {
+        self.id = id
         self.name = name
         self.coordinate = coordinate
         self.message = message

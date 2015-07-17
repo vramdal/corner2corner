@@ -23,6 +23,7 @@
 		C3E5F5FF1B54520800750B29 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = C3E5F5FD1B54520800750B29 /* LaunchScreen.xib */; };
 		C3E5F60B1B54520800750B29 /* corner2cornerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3E5F60A1B54520800750B29 /* corner2cornerTests.swift */; };
 		C3E5F6151B5454F700750B29 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3E5F6141B5454F700750B29 /* MapKit.framework */; };
+		CF58C0826EE79F1632259F2C /* FetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF58C3C4C4280622CC856913 /* FetchService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,7 @@
 		C3E5F6091B54520800750B29 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C3E5F60A1B54520800750B29 /* corner2cornerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = corner2cornerTests.swift; sourceTree = "<group>"; };
 		C3E5F6141B5454F700750B29 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		CF58C3C4C4280622CC856913 /* FetchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				2A31B23C583955C8C4A56F22 /* PubMap.swift */,
 				2A31BBC4930685F4EC04DAC0 /* beer-background.png */,
 				2A31BAE80670861D8016936A /* logo-transparent.png */,
+				CF58C3C4C4280622CC856913 /* FetchService.swift */,
 			);
 			path = corner2corner;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				2A31B0668E5B4A8322A3E0B2 /* Pub.swift in Sources */,
 				2A31B66B7D73ABF2DA853F6F /* PubAnnotation.swift in Sources */,
 				2A31B6964FA3FD25F13BB72E /* PubMap.swift in Sources */,
+				CF58C0826EE79F1632259F2C /* FetchService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

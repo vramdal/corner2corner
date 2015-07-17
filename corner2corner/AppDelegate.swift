@@ -13,10 +13,17 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var fetchService: FetchService = FetchService()
+    var pubsMap = [Int:Pub]()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        self.fetchService.fetch({ (pubs: [Pub]) -> Void in
+            for pub in pubs {
+                self.pubsMap[pub.id] = pub
+            }
+        }, sync: true)
         return true
     }
 

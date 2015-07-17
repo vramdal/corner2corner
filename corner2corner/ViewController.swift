@@ -12,7 +12,6 @@ import MapKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var map: PubMap!
-    var pubs: [Pub] = []
 
     var locationManager = CLLocationManager()
     func checkLocationAuthorizationStatus() {
@@ -23,34 +22,27 @@ class ViewController: UIViewController {
         }
     }
 
+    func firstFetch() {
+/*
+        return FetchService.fetch({ (pubs: [Pub]) -> Void in
+            for pub in pubs {
+                let pubAnnotation = PubAnnotation(pub: pub)
+                self.map.addAnnotation(pubAnnotation)
+            }
+        })
+*/
+    }
+
+
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationAuthorizationStatus()
-
-        let pubListUrl = NSURL(string: "http://pub.til.pub/presence.php")
-
-        let fetchPubsTask = NSURLSession.sharedSession().dataTaskWithURL(pubListUrl!) {(data, response, error) in
-            var parseError: NSError?
-            var pubsDictionary: NSDictionary = NSJSONSerialization.JSONObjectWithData(data,
-                    options: NSJSONReadingOptions.MutableContainers,
-                    error: &parseError) as! NSDictionary
-            for (pubIdx, pubDictionary) in pubsDictionary {
-                let lat: Double = pubDictionary["lat"] as! Double;
-                let lng: Double = pubDictionary["lng"] as! Double;
-                var location = CLLocationCoordinate2D(latitude: lat, longitude: lng)
-                let pub = Pub(name: pubDictionary["pubName"] as! String, coordinate: location, message: pubDictionary["message"] as! String);
-                self.pubs.append(pub)
-            }
-            dispatch_async(dispatch_get_main_queue(), {
-                for pub in self.pubs {
-                    let pubAnnotation = PubAnnotation(pub: pub)
-                    self.map.addAnnotation(pubAnnotation)
-                }
-            })
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let pubsMap = appDelegate.pubsMap
+        for (id, pub) in pubsMap {
+            self.map.addAnnotation(PubAnnotation(pub: pub))
         }
-
-        fetchPubsTask.resume();
-
+        //firstFetch()
         let initialLocation = CLLocation(latitude: 59.907205, longitude: 10.780368)
         let regionRadius: CLLocationDistance = 500
         func centerOnMapLocation(location: CLLocation) {

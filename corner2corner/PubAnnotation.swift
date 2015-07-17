@@ -12,29 +12,26 @@ class PubAnnotation : NSObject, MKAnnotation {
     let tomtGlass = UIImage(named: "emptybeer.png")
 
     let pub : Pub
+    var title : String = ""
+    var subtitle : String = ""
+    let coordinate : CLLocationCoordinate2D
+    var image : UIImage = UIImage(named: "beer.png")!
 
     init(pub : Pub, open: Bool = false) {
         self.pub = pub
+        self.title = ""
+        self.coordinate = pub.coordinate
+        super.init()
+        update()
     }
 
-    var title : String {
-        return pub.name
-    }
-
-    var subtitle : String {
-        return pub.message
-    }
-
-    var coordinate : CLLocationCoordinate2D {
-        return pub.coordinate
-    }
-
-    var image : UIImage {
-        if (self.pub.name == "Asylet") {
-            return fulltGlass!
+    func update() {
+        self.title = pub.name
+        self.subtitle = pub.message
+        if (pub.name == "Asylet") {
+            self.image = fulltGlass!
         } else {
-            return tomtGlass!
+            self.image = tomtGlass!
         }
     }
-
 }
