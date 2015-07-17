@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import CoreData
 
 @UIApplicationMain
@@ -15,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var fetchService: FetchService = FetchService()
     var pubsMap = [Int:Pub]()
+    let pubsChangedEvent = Event<[Pub]>()
+    var updatePubsTimer = NSTimer()
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -24,7 +27,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 self.pubsMap[pub.id] = pub
             }
         }, sync: true)
+        self.pubsChangedEvent.addHandler(self, handler: AppDelegate.handlePubsChanged)
+        updatePubsTimer = NSTimer.scheduledTimerWithTimeInterval(5.0, target: self, selector: Selector("refreshPubs"), userInfo: nil, repeats: true)
         return true
+
+    }
+
+    func refreshPubs() {
+       println("Oppdaterer puber")
+        self.pubsMap[1]!.message = self.pubsMap[1]!.message + "a"
+    }
+
+    func handlePubsChanged(pubs: [Pub]) {
+        println("Pubber oppdatert")
     }
 
     func applicationWillResignActive(application: UIApplication) {

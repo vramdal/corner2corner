@@ -11,7 +11,7 @@ class PubAnnotation : NSObject, MKAnnotation {
     let fulltGlass = UIImage(named: "beer.png")
     let tomtGlass = UIImage(named: "emptybeer.png")
 
-    let pub : Pub
+    var pub : Pub
     var title : String = ""
     var subtitle : String = ""
     let coordinate : CLLocationCoordinate2D
